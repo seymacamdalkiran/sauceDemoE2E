@@ -24,4 +24,10 @@ public abstract class BasePage {
         String addedItem = basketNumber.getText();
         return Integer.parseInt(addedItem);
     }
+    public void click(WebElement element){
+        element.click();
+    }
+    public void clickExceptContinueButton(String name){
+        Driver.get().findElement(By.xpath("//button[.='"+name+"']")).click();
+    }
 }
